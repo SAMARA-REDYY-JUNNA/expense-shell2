@@ -30,10 +30,10 @@ else
     echo "You are super user."
 fi
 
-dnf disable nodejs -y &>>$LOGFILE
+dnf module disable nodejs -y &>>$LOGFILE
 VALIDATE $? "disabling nodejs"
 
-dnf enable nodejs:20 -y &>>$LOGFILE
+dnf module enable nodejs:20 -y &>>$LOGFILE
 VALIDATE $? "enabling nodejs:20 version"
 
 dnf install nodejs -y &>>$LOGFILE
