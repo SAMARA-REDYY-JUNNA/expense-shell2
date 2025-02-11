@@ -28,7 +28,7 @@ else
 fi
 
 dnf insall mysql-server -y &>>$LOGFILE
-VALIDATE $? "installing mysql-server"
+VALIDATE $? "installing mysql server"
 
 systemctl enable mysqld &>>$LOGFILE
 VALIDATE $? "enabling mysql server"
